@@ -1,0 +1,10 @@
+:host {
+    footer {
+        text-align: right;
+        color: #fcd603;
+    }
+}
+
+:host, main {
+    min-height: 100%;
+}

@@ -1,0 +1,56 @@
+@import '../../../scss/base/color';
+
+:host {
+    color: $white;
+
+    img {
+        width: 16.25rem;
+    }
+
+    a:not(.navbar-brand):not(.dropdown-item) {
+        padding: .5rem 1rem !important;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 1.25rem;
+
+        &.red {
+            background: $red;
+        }
+
+        &.blue {
+            background: $blue;
+        }
+        
+        &.green {
+            background: $green;
+        }
+        
+        &.orange {
+            background: $orange;
+        }
+
+        &.pink {
+            background: $pink;
+        }
+
+        &.purple {
+            background: $purple;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: $orange;
+            color: $white;
+        }
+
+        &:focus {
+            outline: 5px auto $orange;
+        }
+    }
+
+    .ll-modal-content {
+        background-color: $red;
+        border: 0.25rem solid $white;
+        border-radius: 20px;
+    }
+}
