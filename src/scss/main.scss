@@ -1,6 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Poppins');
-@import 'scss/main';
+@import 'base/module';
+@import 'components/module';
 
 html, body {
     height: 100%;
@@ -8,7 +8,7 @@ html, body {
 
 body {
     min-height: 100%;
-    background-image: url('./assets/landscape-1200.jpg');
+    background-image: url('../assets/landscape-1200.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

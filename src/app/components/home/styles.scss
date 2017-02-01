@@ -4,6 +4,8 @@
   color: $white;
   
   ll-jumbotron {
+    display: flex;
+    flex-flow: column;
     position: relative;
     margin-bottom: 1rem;
 
@@ -17,6 +19,14 @@
 
     &.blue {
       background: $blue;
+    }
+
+    &.step {
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 2px 4px 7px 5px rgba(0, 0, 0, 0.35);
+      }
     }
 
     .step-emblem {
