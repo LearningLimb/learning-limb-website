@@ -11,6 +11,7 @@ import * as Services from './services';
   declarations: [
     Components.AboutComponent,
     Components.AppComponent,
+    Components.BookDetailComponent,
     Components.BooksComponent,
     Components.ButtonComponent,
     Components.CardComponent,
@@ -32,7 +33,8 @@ import * as Services from './services';
   ],
   providers: [
     Services.ApiService,
-    Services.UserService
+    Services.UserService,
+    Services.BookService
   ],
   bootstrap: [Components.AppComponent]
 })

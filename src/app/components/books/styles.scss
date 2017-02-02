@@ -1,5 +1,28 @@
-@import '../../../scss/base/color';
-
+    @import '../../../scss/base/color';
 :host {
-
+    color: $white;
+    ll-jumbotron {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        i {
+            font-size: 10rem;
+        }
+        &.gender {
+            height: 20rem;
+            width: 20rem;
+            &.boy {
+                background: $blue;
+            }
+            &.girl {
+                background: $pink;
+            }
+        }
+    }
+    .selectable {
+        cursor: pointer;
+        &:hover {
+            box-shadow: 2px 4px 7px 5px rgba(0, 0, 0, 0.35);
+        }
+    }
 }

@@ -1,7 +1,25 @@
 <div class="container">
-    <div class="row">
-        <ll-card *ngFor="let book of books" class="col-3">
-            <img class='img-fluid' src="../../../assets/sample_cover.png" />
+    <div *ngIf="!gender" class="row">
+        <ll-jumbotron class="col-12 mb-3">
+            <h1>Who is the story for?</h1>
+        </ll-jumbotron>
+    </div>
+    <div *ngIf="!gender" class="row justify-content-center align-items-center">
+        <ll-jumbotron class="selectable gender boy col-4" (click)="setGender('boy')">
+            <h3>Boy</h3>
+            <i class="fa fa-male" aria-hidden="true"></i>
+        </ll-jumbotron>
+        <div class="col-2">
+            <h2 class="font-weight-bold text-center">-Or-</h2>
+        </div>
+        <ll-jumbotron class="selectable gender girl col-4" (click)="setGender('girl')">
+            <h3>Girl</h3>
+            <i class="fa fa-female" aria-hidden="true"></i>
+        </ll-jumbotron>
+    </div>
+    <div *ngIf="gender" class="row">
+        <ll-card *ngFor="let book of books | async" tabindex="0" class="selectable col-3" routerLink="/books/{{book.id}}">
+            <img class='img-fluid' [src]="book.coverUrl" />
         </ll-card>
     </div>
 </div>

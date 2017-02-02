@@ -16,6 +16,10 @@ export const routes = RouterModule.forRoot([
         component: Components.BooksComponent
     },
     {
+        path: 'books/:id',
+        component: Components.BookDetailComponent
+    },
+    {
         path: 'about',
         component: Components.AboutComponent
     },
