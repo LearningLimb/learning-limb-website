@@ -7,14 +7,9 @@
                         <img class="img-fluid" [src]="(book | async).coverUrl" />
                     </ll-card>
                 </div>
-                <div class="carousel-item">
+                <div *ngFor="let previewUrl of (book | async).previewPageUrls" class="carousel-item">
                     <ll-card>
-                        <img class="img-fluid" [src]="(book | async).coverUrl" />
-                    </ll-card>
-                </div>
-                <div class="carousel-item">
-                    <ll-card>
-                        <img class="img-fluid" [src]="(book | async).coverUrl" />
+                        <img class="img-fluid" src="{{ previewUrl }}" />
                     </ll-card>
                 </div>
             </div>
@@ -30,6 +25,12 @@
         <ll-jumbotron *ngIf="!userService.currentUser" class="col-6">
             <h2 class="mb-3">Login to Customize</h2>
             <login-form></login-form>
+        </ll-jumbotron>
+        <ll-jumbotron *ngIf="userService.currentUser" class="col-6 d-flex flex-column">
+            <h1>{{ (book | async).title }}</h1>
+            <p>{{ (book | async).description }}</p>
+            <h3 class="text-right">{{ (book | async).price | currency:'USD':true }}</h3>
+            <a class="ll-link blue text-center">Customize</a>
         </ll-jumbotron>
     </div>
 </div>

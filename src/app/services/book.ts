@@ -5,41 +5,27 @@ import { Book } from '../models';
 
 @Injectable()
 export class BookService {
-    private books: Book[] = [
-        {
-            id: '1',
-            title: 'Jonny, the Pickiest of all the Picky Eaters!',
-            price: 20.00,
-            coverUrl: '/assets/sample_cover.png',
-            gender: 'neutral'
-        }, {
-            id: '2',
-            title: 'Jonny, the Pickiest of all the Picky Eaters!',
-            price: 20.00,
-            coverUrl: '/assets/sample_cover.png',
-            gender: 'neutral'
-        }, {
-            id: '3',
-            title: 'Jonny, the Pickiest of all the Picky Eaters!',
-            price: 20.00,
-            coverUrl: '/assets/sample_cover.png',
-            gender: 'neutral'
-        }, {
-            id: '4',
-            title: 'Jonny, the Pickiest of all the Picky Eaters!',
-            price: 20.00,
-            coverUrl: '/assets/sample_cover.png',
-            gender: 'neutral'
-        }, {
-            id: '5',
-            title: 'Jonny, the Pickiest of all the Picky Eaters!',
-            price: 20.00,
-            coverUrl: '/assets/sample_cover.png',
-            gender: 'neutral'
-        }
-    ];
+    private books: Book[] = [];
 
-    constructor(private api: ApiService) { }
+    constructor(private api: ApiService) {
+        for (let i = 0; i < 6; i++) {
+            this.books.push({
+                id: String(i + 1),
+                title: 'Jonny, the Pickiest of all the Picky Eaters!',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan mi vel tincidunt mattis. Aliquam hendrerit facilisis aliquet. Suspendisse potenti. Nam vitae elementum augue.',
+                price: 20.00,
+                coverUrl: '/assets/sample_cover.png',
+                gender: 'neutral',
+                previewPageUrls: [
+                    '/assets/parents-picnic.png',
+                    '/assets/monkey-leaning-tree.png',
+                    '/assets/pirate-boy.png',
+                    '/assets/monkey-pirate.png',
+                    '/assets/jumping-boy.png'
+                ]
+            });
+        }
+    }
 
     list(gender?: string): Observable<Book[]> {
         // return this.api.get('/api/books');
