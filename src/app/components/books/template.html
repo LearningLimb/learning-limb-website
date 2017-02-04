@@ -7,14 +7,14 @@
     <div *ngIf="!gender" class="row justify-content-center align-items-center">
         <ll-jumbotron class="selectable gender boy col-4" (click)="setGender('boy')">
             <h3>Boy</h3>
-            <i class="fa fa-male" aria-hidden="true"></i>
+            <img class='img-fluid' src="/assets/jumping-boy.png" />
         </ll-jumbotron>
         <div class="col-2">
             <h2 class="font-weight-bold text-center">-Or-</h2>
         </div>
-        <ll-jumbotron class="selectable gender girl col-4" (click)="setGender('girl')">
+        <ll-jumbotron class="selectable gender girl col-4 pb-3" (click)="setGender('girl')">
             <h3>Girl</h3>
-            <i class="fa fa-female" aria-hidden="true"></i>
+            <img class='img-fluid' src="/assets/jumping-girl.png" />
         </ll-jumbotron>
     </div>
     <div *ngIf="gender" class="row">
