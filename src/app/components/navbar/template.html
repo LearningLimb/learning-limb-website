@@ -35,12 +35,12 @@
         <!-- Secondary right buttons -->
         <ul class='navbar-nav'>
             <li *ngIf="!userService.currentUser" class='nav-item mr-3'>
-                <a class="nav-link ll-link pink" id="loginMenuLink" data-toggle="modal" data-target="#loginModal">
+                <a class="nav-link ll-link red" id="loginMenuLink" data-toggle="modal" data-target="#loginModal">
                     <i class="fa fa-sign-in" aria-hidden="true"></i> Login
                 </a>
             </li>
             <li *ngIf="userService.currentUser" class='nav-item mr-3 dropdown'>
-                <a class="nav-link ll-link pink dropdown-toggle" id="dropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link ll-link red dropdown-toggle" id="dropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Hi {{ userService.currentUser.name.givenName }}!
                 </a>
                 <div class='dropdown-menu' aria-labelledby="dropdownLink">
