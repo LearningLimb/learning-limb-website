@@ -1,20 +1,20 @@
 <div class="container">
     <div *ngIf="!gender" class="row">
-        <ll-jumbotron class="col-12 mb-3">
+        <ll-jumbotron class="pink-purple col-12 mb-3">
             <h1>Who is the story for?</h1>
         </ll-jumbotron>
     </div>
     <div *ngIf="!gender" class="row justify-content-center align-items-center">
-        <ll-jumbotron class="selectable gender boy col-4" (click)="setGender('boy')">
+        <ll-jumbotron class="selectable gender blue col-4" (click)="setGender('boy')">
             <h3>Boy</h3>
             <img class='img-fluid' src="/assets/jumping-boy.png" />
         </ll-jumbotron>
         <div class="col-2">
             <h2 class="font-weight-bold text-center">-Or-</h2>
         </div>
-        <ll-jumbotron class="selectable gender girl col-4 pb-3" (click)="setGender('girl')">
+        <ll-jumbotron class="selectable gender pink col-4 pb-3" (click)="setGender('girl')">
             <h3>Girl</h3>
-            <img class='img-fluid' src="/assets/jumping-girl.png" />
+            <img id="girlImage" class='img-fluid' src="/assets/jumping-girl.png" />
         </ll-jumbotron>
     </div>
     <div *ngIf="gender" class="row">

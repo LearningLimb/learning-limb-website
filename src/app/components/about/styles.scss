@@ -1,3 +1,5 @@
-:host * {
-    color: #fff;
+@import '../../../scss/base/color';
+
+:host {
+    color: $white;
 }
