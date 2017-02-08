@@ -2,6 +2,10 @@
 
 :host {
   color: $white;
+
+  #limboImg {
+    width: 22%;
+  }
   
   ll-jumbotron {
     display: flex;
