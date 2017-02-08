@@ -1,12 +1,25 @@
 @import '../../../scss/base/color';
-
 :host {
     color: $white;
-
     img {
         width: 16.25rem;
     }
 
+    .nav-item {
+        position: relative;
+        img {
+            width: 12rem;
+            display: none;
+            z-index: -1;
+            transform: rotate(28deg);
+            position: absolute;
+            bottom: -4.4375rem;
+            left: -48px;
+        }
+        &.link-active img {
+            display: inline-block;
+        }
+    }
     .ll-modal-content {
         background-color: $red;
         border: 0.25rem solid $white;

@@ -27,6 +27,7 @@
         color: $white;
     }
     &:focus {
-        outline: 5px auto $orange;
+        color: $white;
+        outline: none;
     }
 }
