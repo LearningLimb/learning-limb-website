@@ -16,8 +16,8 @@
             bottom: -4.4375rem;
             left: -48px;
         }
-        &.link-active img {
-            display: inline-block;
+        .link-active {
+            color: $yellow;
         }
     }
     .ll-modal-content {
