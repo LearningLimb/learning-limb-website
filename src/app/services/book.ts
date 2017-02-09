@@ -13,15 +13,15 @@ export class BookService {
                 id: String(i + 1),
                 title: 'Jonny, the Pickiest of all the Picky Eaters!',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan mi vel tincidunt mattis. Aliquam hendrerit facilisis aliquet. Suspendisse potenti. Nam vitae elementum augue.',
-                price: 20.00,
+                price: 19.95,
                 coverUrl: '/assets/sample_cover.png',
                 gender: 'neutral',
                 previewPageUrls: [
-                    '/assets/parents-picnic.png',
-                    '/assets/monkey-leaning-tree.png',
-                    '/assets/pirate-boy.png',
-                    '/assets/monkey-pirate.png',
-                    '/assets/jumping-boy.png'
+                    '/assets/sample_cover.png',
+                    '/assets/sample_cover.png',
+                    '/assets/sample_cover.png',
+                    '/assets/sample_cover.png',
+                    '/assets/sample_cover.png'
                 ]
             });
         }
