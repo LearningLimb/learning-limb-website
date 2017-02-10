@@ -3,10 +3,6 @@
 :host {
   color: $white;
 
-  #limboImg {
-    width: 22%;
-  }
-  
   ll-jumbotron {
     display: flex;
     flex-flow: column;
@@ -19,6 +15,10 @@
       &:hover {
         box-shadow: 2px 4px 7px 5px rgba(0, 0, 0, 0.35);
       }
+    }
+
+    .character {
+      width: 210px;
     }
 
     .step-emblem {
@@ -37,10 +37,6 @@
     }
   }
 }
-
-
-
-
 
 .step-1-book {
   display: inline-block;
