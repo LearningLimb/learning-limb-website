@@ -27,10 +27,13 @@
             <login-form></login-form>
         </ll-jumbotron>
         <ll-jumbotron *ngIf="userService.currentUser" class="col-6 d-flex flex-column">
-            <h1>{{ (book | async).title }}</h1>
-            <p>{{ (book | async).description }}</p>
+            <h2>This book is for Alex</h2>
+            <h2>Skin Color:</h2>
+            <h2>Hair Color:</h2>
+            <h2>Hair Style:</h2>
+            
             <h3 class="text-right">{{ (book | async).price | currency:'USD':true }}</h3>
-            <a class="ll-link blue text-center" routerLink="./editor">Customize</a>
+            <a class="ll-link blue text-center">Add to cart</a>
         </ll-jumbotron>
     </div>
 </div>

@@ -12,6 +12,7 @@ import * as Services from './services';
     Components.AboutComponent,
     Components.AppComponent,
     Components.BookDetailComponent,
+    Components.BookEditorComponent,
     Components.BooksComponent,
     Components.ButtonComponent,
     Components.CardComponent,

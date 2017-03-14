@@ -1,0 +1,13 @@
+    @import '../../../scss/base/color';
+:host {
+    color: $white;
+    ll-jumbotron {
+
+    }
+    .selectable {
+        cursor: pointer;
+        &:hover {
+            box-shadow: 2px 4px 7px 5px rgba(0, 0, 0, 0.35);
+        }
+    }
+}

@@ -1,6 +1,7 @@
 export * from './about';
 export * from './app';
 export * from './book-detail';
+export * from './book-editor';
 export * from './books';
 export * from './cart';
 export * from './facebook-login-btn';
