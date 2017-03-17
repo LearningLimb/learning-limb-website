@@ -9,6 +9,7 @@ export * from './google-login-btn';
 export * from './home';
 export * from './ll-button';
 export * from './ll-card';
+export * from './ll-color-picker';
 export * from './ll-jumbotron';
 export * from './login-form';
 export * from './navbar';

@@ -17,6 +17,7 @@ import * as Services from './services';
     Components.ButtonComponent,
     Components.CardComponent,
     Components.CartComponent,
+    Components.ColorPickerComponent,
     Components.FacebookLoginButtonComponent,
     Components.GoogleLoginButtonComponent,
     Components.HomeComponent,

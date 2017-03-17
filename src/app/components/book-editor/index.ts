@@ -12,6 +12,11 @@ import { Book } from '../../models';
 export class BookEditorComponent implements OnInit {
     bookId: string;
     book: Observable<Book>;
+    skinColors = ['white', 'brown', 'black'];
+    hairColors = ['yellow', 'brown', 'black', 'orange'];
+
+    selectedHairColor: string;
+    selectedSkinColor: string;
 
     constructor(
         private route: ActivatedRoute,

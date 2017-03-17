@@ -1,0 +1,7 @@
+<div class="color-selector">
+    <span (click)="showSelector(true)" [ngStyle]="{'color': selectedColor}" class="fa fa-square" aria-hidden="true"></span>
+    <div class="selector row center-xs" *ngIf="isSelectorVisible">
+        <div class="color" *ngFor="let color of colors" [ngStyle]="{'background-color': color}" (click)="selectColor(color)">
+        </div>
+    </div>
+</div>
