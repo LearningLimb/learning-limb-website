@@ -27,11 +27,30 @@
             <login-form></login-form>
         </ll-jumbotron>
         <ll-jumbotron *ngIf="userService.currentUser" class="col-6 d-flex flex-column">
-            <h2>This book is for Alex</h2>
-            <h2>Skin Color: <ll-color-picker [colors]="skinColors"></ll-color-picker></h2>
-            <h2>Hair Color: <ll-color-picker [colors]="hairColors"></ll-color-picker></h2>
-            <h2>Hair Style:</h2>
-            
+            <form #characterForm="ngForm">
+                <div class="form-group row">
+                    <h2 class="col-form-label col-sm-5">This book is for:</h2>
+                    <div class="col-sm-7">
+                        <input id="name" name="name" #name="ngModel" [(ngModel)]="model.name" class="form-control" type="text" required/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-inline-block col-6">
+                        <h2>Skin Color:
+                            <ll-color-picker [colors]="skinColors"></ll-color-picker>
+                        </h2>
+                        <h2>Hair Color:
+                            <ll-color-picker [colors]="hairColors"></ll-color-picker>
+                        </h2>
+                        <h2>Hair Style:</h2>
+                        <input class="d-inline-block" type="file" accept="image/*" id="image" name="image" (change)="updateImage($event)" required
+                        />
+                    </div>
+                    <div class="col-6">
+                        <img [src]="selectedImageData" style="max-height: 10rem;" class="img-fluid" />
+                    </div>
+                </div>
+            </form>
             <h3 class="text-right">{{ (book | async).price | currency:'USD':true }}</h3>
             <a class="ll-link blue text-center">Add to cart</a>
         </ll-jumbotron>
