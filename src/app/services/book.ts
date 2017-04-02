@@ -15,7 +15,7 @@ export class BookService {
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan mi vel tincidunt mattis. Aliquam hendrerit facilisis aliquet. Suspendisse potenti. Nam vitae elementum augue.',
                 price: 19.95,
                 coverUrl: '/assets/sample_cover.png',
-                gender: 'neutral',
+                gender: 'male',
                 previewPageUrls: [
                     '/assets/sample_cover.png',
                     '/assets/sample_cover.png',

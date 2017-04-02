@@ -5,11 +5,11 @@
         </ll-jumbotron>
     </div>
     <div *ngIf="!gender" class="row justify-content-center align-items-center">
-        <ll-jumbotron class="selectable gender blue col-4 mr-5" (click)="setGender('boy')">
+        <ll-jumbotron class="selectable gender blue col-4 mr-5" (click)="setGender('male')">
             <h3>Boy</h3>
             <img class='img-fluid' src="/assets/jumping-boy.png" />
         </ll-jumbotron>
-        <ll-jumbotron class="selectable gender light-pink col-4 pb-3" (click)="setGender('girl')">
+        <ll-jumbotron class="selectable gender light-pink col-4 pb-3" (click)="setGender('female')">
             <h3>Girl</h3>
             <img id="girlImage" class='img-fluid' src="/assets/jumping-girl.png" />
         </ll-jumbotron>
