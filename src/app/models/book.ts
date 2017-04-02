@@ -6,4 +6,10 @@ export class Book {
     public coverUrl: string;
     public gender: string;
     public previewPageUrls: string[];
+    public requiredPhotos: {
+        character: Character,
+        emotion: string
+    }[]
 }
+
+export type Character = "child" | "mother" | "father";

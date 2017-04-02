@@ -8,7 +8,7 @@ export class BookService {
     private books: Book[] = [];
 
     constructor(private api: ApiService) {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 5; i++) {
             this.books.push({
                 id: String(i + 1),
                 title: 'Jonny, the Pickiest of all the Picky Eaters!',
@@ -22,7 +22,8 @@ export class BookService {
                     '/assets/sample_cover.png',
                     '/assets/sample_cover.png',
                     '/assets/sample_cover.png'
-                ]
+                ],
+                requiredPhotos: []
             });
         }
     }
