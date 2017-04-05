@@ -22,11 +22,11 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <ll-jumbotron *ngIf="!userService.currentUser" class="col-6">
+        <ll-jumbotron *ngIf="!userService.currentUser" [ngStyle]="{ background: (book | async).gender === 'male' ? '#00a1ee' : '#FF69B4' }" class="col-6">
             <h2 class="mb-3">Login to Customize</h2>
             <login-form></login-form>
         </ll-jumbotron>
-        <ll-jumbotron *ngIf="userService.currentUser" class="col-6 d-flex flex-column">
+        <ll-jumbotron *ngIf="userService.currentUser" [ngStyle]="{ background: (book | async).gender === 'male' ? '#00a1ee' : '#FF69B4' }" class="col-6 d-flex flex-column">
             <form #characterForm="ngForm">
                 <div class="form-group row">
                     <h2 class="col-form-label col-sm-5">This book is for:</h2>
@@ -52,7 +52,7 @@
                 </div>
             </form>
             <h3 class="text-right">{{ (book | async).price | currency:'USD':true }}</h3>
-            <a class="ll-link blue text-center">Add to cart</a>
+            <a class="ll-link green text-center">Add to cart</a>
         </ll-jumbotron>
     </div>
 </div>
