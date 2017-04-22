@@ -7,6 +7,9 @@
     "proxies": {
         "/auth/": {
             "origin": "${AUTH_HOST}/auth/"
+        },
+        "/api/": {
+            "origin": "${API_HOST}/api/"
         }
     }
 }

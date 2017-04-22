@@ -3,5 +3,10 @@
     "target": "http://localhost:3000",
     "secure": false,
     "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://learning-limb-api.herokuapp.com",
+    "secure": false,
+    "changeOrigin": true
   }
 }

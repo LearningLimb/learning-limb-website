@@ -5,7 +5,7 @@ import { BookService, UserService } from '../../services';
 import { Book } from '../../models';
 
 @Component({
-    selector: 'books',
+    selector: 'll-book-editor',
     templateUrl: './template.html',
     styleUrls: ['./styles.scss']
 })
@@ -34,7 +34,7 @@ export class BookEditorComponent implements OnInit {
         this.reader.onload = (e) => {
          this.zone.run(() => {
              this.selectedImageData = e.target['result'];
-         }); 
+         });
         }
         this.book = this.route.params.switchMap(params => {
             this.bookId = params['id'];
