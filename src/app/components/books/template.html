@@ -15,7 +15,7 @@
         </ll-jumbotron>
     </div>
     <div *ngIf="gender" class="row">
-        <ll-card *ngFor="let book of books | async" tabindex="0" class="selectable col-3" routerLink="/books/{{book.id}}">
+        <ll-card *ngFor="let book of books | async" tabindex="0" class="selectable col-3" routerLink="/books/{{book._id}}">
             <img class='img-fluid' [src]="book.coverUrl" />
         </ll-card>
     </div>

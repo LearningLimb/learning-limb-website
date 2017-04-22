@@ -7,7 +7,7 @@ import { UserService } from '../../services';
     styleUrls: ['./styles.scss']
 })
 export class NavBarComponent implements OnInit {
-    
+
     constructor(public userService: UserService, private zone: NgZone){}
 
     ngOnInit() {
@@ -15,6 +15,6 @@ export class NavBarComponent implements OnInit {
             window.location.hash = '';
         }
 
-        this.userService.isAuthenticated().subscribe();
+        this.userService.isAuthenticated().subscribe(res => console.log('User is logged in'), err => console.log('User is not logged in'));
     }
 }

@@ -5,7 +5,7 @@ import { BookService } from '../../services';
 import { Book } from '../../models';
 
 @Component({
-    selector: 'books',
+    selector: 'll-books',
     templateUrl: './template.html',
     styleUrls: ['./styles.scss']
 })
